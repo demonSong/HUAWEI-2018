@@ -82,37 +82,31 @@ Predict Date:
 
 **数据去噪（手段一）：**
 采用一级指数平滑：一阶指数平滑实际就是对历史数据的加权平均，它可以用于任何一种没有明显函数规律但确实存在某种前后关联的时间序列的短期预测。公式为：
-
-$$
-S_{t + 1} = \alpha \cdot y_t + (1 - \alpha) \cdot S_{t}
-$$
+S_{t + 1} = alpha * y_t + (1 - alpha) * S_t
 其中，$y_t$表示第t个时刻的真实预测值，$S_t$表示第t时刻平滑后的值。不过此处，我们并没有将指数平滑用于预测，而是对公式做了如下修改：
-$$
-\begin{cases}
-S_1 &= y_1, \space \text{if  t = 1} \\ 
-S_{t} &= \alpha \cdot y_t + (1 - \alpha) \cdot S_{t - 1},\space \text{if } t \ge 2 \\
-\end{cases}
-$$
-当前第t时刻的平滑值，由两部分组成：t时刻的真实值和前t-1时刻平滑值的加权平均。即当$\alpha = 1$时，不产生平滑效果。当$\alpha = 0$时，是一条恒为$y_1$的直线。
+if t = 1: S_1 = y_1
+if t > 1: S_t = alpha * y_t + (1 - alpha) * S_{t - 1}
+当前第t时刻的平滑值，由两部分组成：t时刻的真实值和前t-1时刻平滑值的加权平均。即当alpha = 1时，不产生平滑效果。当alpha = 0时，是一条恒为y_1的直线。
 
 举个例子：（针对flavor 5）
 
-**$\alpha = 0.2$**
+**alpha = 0.2**
+
 ![这里写图片描述](https://img-blog.csdn.net/20180430180906446?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ2ODgxNDU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-**$\alpha = 0.5$**
+**alpha = 0.5**
 ![这里写图片描述](https://img-blog.csdn.net/20180430181545477?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ2ODgxNDU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-**$\alpha = 0.9$**
+**alpha = 0.9**
 
 ![这里写图片描述](https://img-blog.csdn.net/20180430181744472?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ2ODgxNDU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-显然，当$\alpha = 0.5$时，对局部极大值起到了一定的约束作用，并且能较好的拟合原序列。针对线上不同flavor的$\alpha$，我们没有特别好的方法，只能通过线上不断测试得到一个较好结果的$\alpha$。
+显然，当alpha = 0.5时，对局部极大值起到了一定的约束作用，并且能较好的拟合原序列。针对线上不同flavor的alpha，我们没有特别好的方法，只能通过线上不断测试得到一个较好结果的alpha。
 
 **数据去噪（手段二）：**
 从聚类的角度来看，去噪是为了舍弃异常点（outlier），我们直接采用了一种简单粗暴的思路。核心思路是假设序列中的值符合高斯分布，因此可以去除高斯分布边缘两侧的离群点。如下图：
 ![这里写图片描述](https://img-blog.csdn.net/20180430182717167?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ2ODgxNDU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-可以去除大于$\mu + 3\delta$和小于$\mu - 3\delta$的离群点，保留99%的数据用于训练。
+可以去除大于mu + 3*delta和小于mu - 3*delta的离群点，保留99%的数据用于训练。
 
 **模型选择**
 我们测试很多种模型，始终得不到分数较高且稳定的模型，ARIMA模型和局部线性加权模型在线上表现不错，但稳定性依旧不够，因此我们最终还是采用均值大法来预测。这里需要提一点，复赛阶段，预测可以分为两个阶段，官方给出的预测时间是可能存在间隙的，如下图：
