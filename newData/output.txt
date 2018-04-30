@@ -1,0 +1,49 @@
+399
+flavor3 1
+flavor2 50
+flavor5 65
+flavor4 11
+flavor1 38
+flavor7 8
+flavor10 1
+flavor6 31
+flavor9 24
+flavor12 41
+flavor8 97
+flavor11 8
+flavor14 7
+flavor13 1
+flavor16 3
+flavor15 8
+flavor18 1
+flavor17 4
+
+High-Performance 5
+High-Performance-1 flavor16 2 flavor15 1 flavor17 1
+High-Performance-2 flavor14 3 flavor16 1 flavor17 1
+High-Performance-3 flavor14 4 flavor13 1 flavor7 2 flavor10 1 flavor11 2
+High-Performance-4 flavor4 6 flavor7 5 flavor8 8 flavor11 6
+High-Performance-5 flavor4 5 flavor1 22 flavor8 20
+
+General 10
+General-1 flavor12 1 flavor8 12
+General-2 flavor12 1 flavor8 12
+General-3 flavor12 1 flavor8 12
+General-4 flavor12 1 flavor8 12
+General-5 flavor12 1 flavor8 12
+General-6 flavor5 8 flavor12 1 flavor8 8
+General-7 flavor5 24 flavor12 1
+General-8 flavor5 24 flavor12 1
+General-9 flavor2 32 flavor5 8 flavor12 1
+General-10 flavor3 1 flavor7 1 flavor6 15
+
+Large-Memory 9
+Large-Memory-1 flavor15 1 flavor18 1 flavor17 1
+Large-Memory-2 flavor15 4
+Large-Memory-3 flavor15 2 flavor12 4
+Large-Memory-4 flavor2 16 flavor1 16 flavor9 1 flavor12 6
+Large-Memory-5 flavor12 8
+Large-Memory-6 flavor12 8
+Large-Memory-7 flavor9 4 flavor12 6
+Large-Memory-8 flavor9 16
+Large-Memory-9 flavor2 2 flavor5 1 flavor17 1 flavor6 16 flavor9 3 flavor8 1

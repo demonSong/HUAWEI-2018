@@ -1,0 +1,79 @@
+619
+flavor3 31
+flavor2 79
+flavor5 61
+flavor4 51
+flavor1 40
+flavor7 53
+flavor10 0
+flavor6 41
+flavor9 58
+flavor12 21
+flavor8 77
+flavor11 28
+flavor14 55
+flavor13 0
+flavor16 0
+flavor15 0
+flavor18 0
+flavor17 24
+
+High-Performance 4
+High-Performance-1 flavor14 1 flavor17 2 flavor7 8
+High-Performance-2 flavor14 1 flavor17 2 flavor7 8
+High-Performance-3 flavor14 4 flavor2 2 flavor5 1 flavor4 7 flavor1 2 flavor7 4 flavor8 1 flavor11 1
+High-Performance-4 flavor5 34 flavor4 13 flavor1 6 flavor8 3
+
+General 50
+General-1 flavor14 3 flavor12 1
+General-2 flavor14 1 flavor7 4 flavor9 4 flavor11 1
+General-3 flavor14 1 flavor7 4 flavor9 4 flavor11 1
+General-4 flavor14 1 flavor7 4 flavor9 4 flavor11 1
+General-5 flavor14 1 flavor7 4 flavor9 4 flavor11 1
+General-6 flavor14 1 flavor7 4 flavor9 4 flavor11 1
+General-7 flavor14 1 flavor7 4 flavor9 4 flavor11 1
+General-8 flavor14 1 flavor7 4 flavor9 4 flavor11 1
+General-9 flavor14 3 flavor9 2
+General-10 flavor14 3 flavor9 2
+General-11 flavor14 2 flavor7 2 flavor9 3 flavor8 1
+General-12 flavor14 1 flavor4 2 flavor7 3 flavor6 2 flavor9 3 flavor8 2
+General-13 flavor14 1 flavor4 8 flavor6 8 flavor8 2
+General-14 flavor14 1 flavor4 8 flavor6 8 flavor8 2
+General-15 flavor14 1 flavor4 8 flavor6 8 flavor8 2
+General-16 flavor14 2 flavor4 4 flavor6 6 flavor8 1
+General-17 flavor3 6 flavor14 2 flavor4 1 flavor1 6 flavor6 3 flavor8 1
+General-18 flavor3 16 flavor14 1 flavor1 16 flavor8 2
+General-19 flavor14 2 flavor12 1 flavor8 4
+General-20 flavor12 1 flavor8 12
+General-21 flavor12 1 flavor8 12
+General-22 flavor12 1 flavor8 12
+General-23 flavor2 36 flavor5 6 flavor12 1
+General-24 flavor2 16 flavor17 1 flavor12 1
+General-25 flavor14 1 flavor17 1 flavor12 1
+General-26 flavor14 1 flavor17 1 flavor12 1
+General-27 flavor14 1 flavor17 1 flavor12 1
+General-28 flavor14 1 flavor17 1 flavor12 1
+General-29 flavor14 1 flavor17 1 flavor12 1
+General-30 flavor14 1 flavor17 1 flavor12 1
+General-31 flavor14 1 flavor17 1 flavor12 1
+General-32 flavor14 1 flavor17 1 flavor12 1
+General-33 flavor14 1 flavor17 1 flavor12 1
+General-34 flavor14 1 flavor17 1 flavor12 1
+General-35 flavor14 1 flavor17 1 flavor12 1
+General-36 flavor14 1 flavor17 1 flavor12 1
+General-37 flavor14 1 flavor17 1 flavor12 1
+General-38 flavor14 1 flavor17 1 flavor12 1
+General-39 flavor3 8 flavor2 4 flavor17 1 flavor1 8 flavor9 1
+General-40 flavor14 1 flavor17 1 flavor9 2
+General-41 flavor14 1 flavor17 1 flavor9 2
+General-42 flavor14 1 flavor17 1 flavor9 2
+General-43 flavor14 1 flavor17 1 flavor9 2
+General-44 flavor14 2 flavor9 2 flavor11 2
+General-45 flavor9 2 flavor11 6
+General-46 flavor9 2 flavor11 6
+General-47 flavor9 2 flavor11 6
+General-48 flavor9 2 flavor8 12
+General-49 flavor2 2 flavor5 7 flavor6 2 flavor9 1 flavor8 8
+General-50 flavor3 1 flavor2 19 flavor5 13 flavor1 2 flavor6 4
+
+Large-Memory 0
