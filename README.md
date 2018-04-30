@@ -211,6 +211,7 @@ fixed_factor =  alpha^{(预测天数 + 间隔) / 7 + 1}
 ![这里写图片描述](https://img-blog.csdn.net/20180430203605236?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ2ODgxNDU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 **放置trick**
+
 如果不考虑预测的准确性，对利用率不足的物理机可以选择填塞操作，无非牺牲一点预测的准确性（实际可以通过调参自动拟合，影响微乎其微，却对利用率有较大的提升）。
 
 思路一：每种flavor最多塞1个，以保证预测的准确性。这样，我们贪心选择利用率最差的物理机，尝试塞每种flavor，如果对利用率有所提升，则塞，否则尝试其他物理机。线下随机100次测试能够提升到96%。
