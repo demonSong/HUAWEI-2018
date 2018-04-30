@@ -202,7 +202,7 @@ fixed_factor =  alpha^{(预测天数 + 间隔) / 7 + 1}
 
 ![这里写图片描述](https://img-blog.csdn.net/20180430202303107?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ2ODgxNDU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-黄色为队首待组合的区域，Q4表示为MEM/CPU比为4的flavor队列，同理Q2和Q1分别是MEM/CPU比为2和1的flavor队列，有些队列按照flavor的core数排序，队首的三个flavor组合式，先选择1.5的组合方式，如果不存在1.5组合方式，选择2.5组合方式，否则选择3.0组合方式。
+黄色为队首待组合的区域，Q4表示为MEM/CPU比为4的flavor队列，同理Q2和Q1分别是MEM/CPU比为2和1的flavor队列，优先队列按照flavor的core数排序，队首的三个flavor组合时，先选择1.5的组合方式，如果不存在1.5组合方式，选择2.5组合方式，否则选择3.0组合方式。
 
 根据上述组合后，再采用背包组合方式暴力搜索三个个物理机的最大CPU利用率和最大MEM利用率。比如，针对flavor队列，选择一组物品，预先放置到General，High-performance， Large-Memory中，得到CPU和MEM的平均利用率，谁的平均利用率最大，就把这组物品放到该物理机下，且该组物品不会出现在下次的放置当中。
 
