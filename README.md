@@ -111,6 +111,7 @@ if t > 1: S_t = alpha * y_t + (1 - alpha) * S_{t - 1}
 **数据去噪（手段二）：**
 
 从聚类的角度来看，去噪是为了舍弃异常点（outlier），我们直接采用了一种简单粗暴的思路。核心思路是假设序列中的值符合高斯分布，因此可以去除高斯分布边缘两侧的离群点。如下图：
+
 ![这里写图片描述](https://img-blog.csdn.net/20180430182717167?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ2ODgxNDU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 可以去除大于mu + 3 * delta和小于mu - 3 * delta的离群点，保留99%的数据用于训练。
